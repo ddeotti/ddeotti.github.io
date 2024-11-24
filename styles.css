@@ -8,110 +8,104 @@
 
 body {
     display: flex;
-    flex-direction: row;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Container geral */
+/* Estrutura geral */
 .container {
     display: flex;
-    flex: 1;
+    width: 100%;
 }
 
-/* Menu Lateral (Sidebar) */
+/* Sidebar (menu lateral) */
 .sidebar {
-    width: 250px;
-    background-color: #2c3e50;
+    width: 260px;
+    background-color: #1b2838;
     color: #ecf0f1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    padding-top: 20px;
 }
 
-.profile {
+.sidebar .profile {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .profile-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 3px solid #ecf0f1;
 }
 
 .profile h1 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.profile p {
-    font-size: 0.9rem;
-    color: #bdc3c7;
+    margin-bottom: 15px;
+    color: #00bcd4;
 }
 
 .sidebar nav ul {
     list-style: none;
+    width: 100%;
     padding: 0;
 }
 
 .sidebar nav ul li {
+    width: 100%;
+    text-align: center;
     margin: 10px 0;
 }
 
 .sidebar nav ul li a {
     text-decoration: none;
     color: #ecf0f1;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
 }
 
-.sidebar nav ul li a:hover {
-    color: #1abc9c;
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background-color: #00bcd4;
+    color: #1b2838;
+    border-radius: 20px;
 }
 
-/* Conteúdo Principal */
+/* Conteúdo principal */
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
     overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .section {
     margin-bottom: 30px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #2c3e50;
-    border-bottom: 2px solid #1abc9c;
+    color: #1b2838;
+    border-bottom: 2px solid #00bcd4;
     padding-bottom: 5px;
 }
 
-.section p, .section ul li {
-    margin-bottom: 10px;
+.section p,
+.section ul li {
+    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .section ul {
     list-style: disc;
     padding-left: 20px;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
 }
