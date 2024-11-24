@@ -3,74 +3,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-/* Header e navegação */
-header {
-    background-color: #003366;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Container geral */
+.container {
+    display: flex;
+    flex: 1;
 }
 
-header .logo h1 {
-    font-size: 2rem;
+/* Menu Lateral (Sidebar) */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #ecf0f1;
+}
+
+.profile h1 {
+    font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
-header .logo p {
-    font-size: 1rem;
-    color: #ccc;
+.profile p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
 }
 
-.navbar {
-    margin-top: 15px;
-}
-
-.navbar ul {
+.sidebar nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    padding: 0;
 }
 
-.navbar li {
-    margin: 0 15px;
+.sidebar nav ul li {
+    margin: 10px 0;
 }
 
-.navbar a {
+.sidebar nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #ecf0f1;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-.navbar a:hover {
-    color: #00c4ff;
+.sidebar nav ul li a:hover {
+    color: #1abc9c;
 }
 
-/* Seções */
-.section {
+/* Conteúdo Principal */
+.content {
+    flex: 1;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 30px;
     background: #fff;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
     margin-bottom: 15px;
-    color: #003366;
-    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+}
+
+.section p, .section ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 .section ul {
@@ -78,16 +105,13 @@ header .logo p {
     padding-left: 20px;
 }
 
-.section p, .section ul li {
-    margin-bottom: 10px;
-}
-
 /* Footer */
 footer {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     text-align: center;
     padding: 10px 0;
-    background-color: #003366;
-    color: #fff;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
 }
