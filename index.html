@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Professor - Home</title>
+    <title>Demo Professor</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,23 +15,46 @@
     </header>
     <nav>
         <ul class="navbar">
-            <li><a href="about.html">About</a></li>
+            <li><a href="#about">About</a></li>
             <li class="dropdown">
-                <a href="research.html" class="dropbtn">Research</a>
+                <a href="#research" class="dropbtn">Research</a>
                 <div class="dropdown-content">
-                    <a href="research-areas.html">Research Areas</a>
-                    <a href="ongoing-projects.html">Ongoing Projects</a>
+                    <a href="#research-areas">Research Areas</a>
+                    <a href="#ongoing-projects">Ongoing Projects</a>
                 </div>
             </li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="section">
-            <h2>Welcome</h2>
-            <p>This is the homepage for the demo professor's website.</p>
-            <img src="https://via.placeholder.com/800x400" alt="Homepage Image" class="responsive-img">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <img src="https://via.placeholder.com/800x400" alt="About Image" class="responsive-img">
+            <p>This is a demo page for a professor. You can include your biography here.</p>
+        </section>
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Research Image" class="responsive-img">
+            <p>Provide details about your research areas and interests.</p>
+            <div id="research-areas">
+                <h3>Research Areas</h3>
+                <p>Include detailed information about your research fields.</p>
+            </div>
+            <div id="ongoing-projects">
+                <h3>Ongoing Projects</h3>
+                <p>Highlight ongoing research projects here.</p>
+            </div>
+        </section>
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Publications Image" class="responsive-img">
+            <p>List your publications and academic contributions here.</p>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Contact Image" class="responsive-img">
+            <p>Email: <a href="mailto:professor@example.com">professor@example.com</a></p>
         </section>
     </main>
     <footer>
