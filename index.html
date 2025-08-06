@@ -1,42 +1,112 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <!---->
+<html>
   <head>
-    <title>Página pessoal de Diego Deotti</title>
-    <meta content="charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
-    <header>
-      <div class="header-content">
-      <h1> Diego Deotti's Website</h1>
-      <p>Bem vindo a minha página pessoal</p>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#f8f9fc] group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e6e9f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#0d0f1c]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-[#0d0f1c] text-lg font-bold leading-tight tracking-[-0.015em]">Dr. Eleanor Vance</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">About</a>
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">Teaching Materials</a>
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">Contact</a>
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">Publications</a>
+              <a class="text-[#0d0f1c] text-sm font-medium leading-normal" href="#">Projects</a>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrxmgJUSMr1VnEvWVOrkzrXoHQvVj6oa6jje5WEEFeggfVldeyrD09sV3ZvneZ088EUTiWXV6psU0NVNBydK74R_ZNjiJVwgh20e2QnxZ5lAWLlJVO_xUetQrbFjeDqL-A3DhHkIE7YBadtwJ7yw5iRcTNlhLSejdlRoOjwllCR92XxsxMihqK6KSO6eCL0jCVOumeWgZWGrhkvbywuDdT0ejE7H0ueiobHjxeWfd5K3SUY7JVmP7VksalyOALgVANI9IM67Nzbrxj");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex p-4 @container">
+              <div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                <div class="flex gap-4">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp3oaz2eb7NlnB4TU7OBtA4qR542aSZNFFSJe5vMufRHEDGDp-MNg-q4WhCOHMilWqoGnpbzVBay_h7_yvLkplW7Cwz-gh6TUnyz82FY9Ekjhd6dqGzUar8QPTAWw9CKuuXmd32HhXjMumHZLeeF7MmmHDkpH713M5COb3HDf9_mIdBkG--QbDLjrYVDzScqq0wv6s2nxCiGNtDNvw6OiJxTbzlCciehankMjERvV1JUDFmyC47CXMYa5ef_Egqq9g7PvFJYyKaSBm");'
+                  ></div>
+                  <div class="flex flex-col justify-center">
+                    <p class="text-[#0d0f1c] text-[22px] font-bold leading-tight tracking-[-0.015em]">Dr. Eleanor Vance</p>
+                    <p class="text-[#47569e] text-base font-normal leading-normal">Professor of Electrical Engineering</p>
+                    <p class="text-[#47569e] text-base font-normal leading-normal">Specializing in renewable energy systems and power electronics.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Home</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">About</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Teaching Materials</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Publications</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Projects</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Useful Links</a>
+                <a class="text-[#47569e] text-base font-normal leading-normal min-w-40" href="#">Blog</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#47569e]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#47569e]" data-icon="LinkedinLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#47569e] text-base font-normal leading-normal">@2024 Dr. Eleanor Vance. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
       </div>
-    </header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="./inicio.html">Inicio</a></li>
-        <li><a href="./curriculo.html">curriculo</a></li>
-        <li><a href="./tarefas.html">tarefas</a></li>
-        <li><a href="./sobre.html">sobre</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section class="section">
-        <h2>Inicio</h2>
-      </section>
-      <section class="section">
-        <h2>curriculo<</h2>
-      </section>
-      <section class="section">
-        <h2>tarefas</h2>
-      </section>
-      <section class="section">
-        <h2>sobre</h2>
-      </section>
-    </main>
-    <footer>
-      <p>2025 - Diego Deotti</p>
-    </footer>
+    </div>
   </body>
 </html>
