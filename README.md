@@ -1,2 +1,2 @@
 # ddeotti.github.io
-repositorio da paginal pessoal prof. Diego
+Repositorio com o código fonte da página pessoal do prof. Diego Deotti
