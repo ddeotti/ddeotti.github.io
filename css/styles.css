@@ -1344,6 +1344,21 @@ main {
   gap: var(--gutter);
 }
 
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+}
+
+.tools-card {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius);
+  padding: var(--stack-md);
+}
+
+
 @media (min-width: 768px) {
   .advisee-grid {
     grid-template-columns: repeat(2, 1fr);
