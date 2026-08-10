@@ -979,7 +979,7 @@ main {
 
 /* Downloads do curso */
 .course-down {
-  gap: var(--stack-lg);
+  margin-bottom: 20px;
 }
 
 .course-down a {
@@ -998,6 +998,11 @@ main {
   font-size: 18px;
 }
 
+.course-card .subtitulo {
+  color: var(primary);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
 /* =========================================================
    PÁGINA: PESQUISA
    ========================================================= */
