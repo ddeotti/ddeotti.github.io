@@ -977,6 +977,27 @@ main {
   font-size: 18px;
 }
 
+/* Downloads do curso */
+.course-down {
+  gap: var(--stack-lg);
+}
+
+.course-down a {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--secondary);
+  gap: 4px;
+}
+
+.course-down a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.course-down .material-symbols-outlined {
+  font-size: 18px;
+}
+
 /* =========================================================
    PÁGINA: PESQUISA
    ========================================================= */
