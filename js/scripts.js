@@ -41,40 +41,95 @@
     });
   }
 
-  /* ----- Formulário de contato ----- */
-  function initContactForm() {
-    const form = document.querySelector('#contact-form');
-    if (!form) return;
+ /* ----- Formulário de contato ----- */
+function initContactForm() {
+  const form = document.querySelector('#contact-form');
+  if (!form) return;
 
-    const status = document.querySelector('#form-status');
+  const status = document.querySelector('#form-status');
+  const button = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-      const data = {
-        nome: form.elements['name'].value.trim(),
-        email: form.elements['email'].value.trim(),
-        assunto: form.elements['subject'].value.trim(),
-        mensagem: form.elements['message'].value.trim()
-      };
+    const nome = form.elements['name'].value.trim();
+    const email = form.elements['email'].value.trim();
+    const assunto = form.elements['subject'].value.trim();
+    const mensagem = form.elements['message'].value.trim();
 
-      if (!data.nome || !data.email || !data.assunto || !data.mensagem) {
-        showStatus(status, 'Por favor, preencha todos os campos.', 'error');
-        return;
+    if (!nome || !email || !assunto || !mensagem) {
+      showStatus(
+        status,
+        'Por favor, preencha todos os campos.',
+        'error'
+      );
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      showStatus(
+        status,
+        'Por favor, informe um e-mail válido.',
+        'error'
+      );
+      return;
+    }
+
+    try {
+      button.disabled = true;
+
+      showStatus(
+        status,
+        'Enviando mensagem...',
+        'info'
+      );
+
+      const formData = new FormData(form);
+
+      const response = await fetch(
+        'https://api.web3forms.com/submit',
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success) {
+        showStatus(
+          status,
+          'Mensagem enviada com sucesso! Retornarei o contato em breve.',
+          'success'
+        );
+
+        form.reset();
+      } else {
+        console.error('Erro Web3Forms:', result);
+
+        showStatus(
+          status,
+          'Não foi possível enviar a mensagem. Tente novamente.',
+          'error'
+        );
       }
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(data.email)) {
-        showStatus(status, 'Por favor, informe um e-mail válido.', 'error');
-        return;
-      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
 
-      // Simulação de envio (em produção: enviar para backend / serviço)
-      console.log('Dados do formulário:', data);
-      showStatus(status, 'Mensagem enviada com sucesso! Retornarei o contato em breve.', 'success');
-      form.reset();
-    });
-  }
+      showStatus(
+        status,
+        'Erro de conexão. Tente novamente.',
+        'error'
+      );
+
+    } finally {
+      button.disabled = false;
+    }
+  });
+}
 
   function showStatus(el, message, type) {
     if (!el) return;
