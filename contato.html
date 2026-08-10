@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato — Prof. Diego Deotti</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
   <nav class="topbar">
@@ -101,12 +103,16 @@
 
         <div id="form-status" class="form-status"></div>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+          <input type="hidden" name="access_key" value="c643f59f-b6fd-483b-a932-0800410c35c5">
+
           <div class="form-grid">
             <div class="form-field">
               <label for="name">Nome Completo</label>
               <input type="text" id="name" name="name" required>
             </div>
+
             <div class="form-field">
               <label for="email">Endereço de E-mail</label>
               <input type="email" id="email" name="email" required>
@@ -126,9 +132,12 @@
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">
               Enviar Mensagem
-              <span class="material-symbols-outlined" style="font-size: 18px">send</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">
+                send
+              </span>
             </button>
           </div>
+
         </form>
       </section>
 
@@ -153,4 +162,5 @@
 
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
